@@ -1,0 +1,17 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/bootstrap-vue/src/index.scss";
+
+body {
+    font-family: -apple-system, system-ui, "Roboto", sans-serif;
+}
+
+#app {
+    background: #effffd;
+    min-height: 100vh;
+}
+
+main {
+    background-color: white;
+    padding: 2rem;
+    min-height: calc(95vh - 48px);
+}
