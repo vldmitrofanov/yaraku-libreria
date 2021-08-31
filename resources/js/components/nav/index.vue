@@ -1,8 +1,11 @@
 <template>
   <b-navbar toggleable="lg" type="dark" variant="info">
     <div class="container">
-      <b-navbar-brand href="#">Yaraku Libreria App</b-navbar-brand>
-
+      <router-link :to="{ name: 'books' }">
+        <b-navbar-brand>
+          Yaraku Libreria App
+        </b-navbar-brand>
+      </router-link>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
