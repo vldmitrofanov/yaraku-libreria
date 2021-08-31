@@ -40,7 +40,7 @@ class BooksController extends Controller
             'order_by' => 'nullable|in:asc,desc',
             'search' => 'nullable|max:255'
         ]);
-        $books = \App\Models\Books::paginate(15);
+        $books = \App\Models\Books::paginate(10);
         return BookResource::collection($books);
     }
 }

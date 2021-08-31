@@ -14,6 +14,12 @@ class BookResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'title' => $this->title,
+            'author' => $this->author,
+            'description' => $this->description,
+            'created' => \Carbon\Carbon::parse($this->created_at)->format('M d, Y')
+        ];
     }
 }
