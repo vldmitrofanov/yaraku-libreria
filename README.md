@@ -9,7 +9,7 @@ php artisan key:generate
 cp example.env to .env
 ```
 
-Connect your database and set you access credentials in `.env` file and update config cache:
+Connect your database and set your access credentials in `.env` file and update config cache:
 ```bash
 php artisan config:cache
 ```
