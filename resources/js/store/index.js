@@ -110,7 +110,7 @@ const store = new Vuex.Store({
         commit('setBooks', [])
         commit('setLoading', false)
         commit('setResponseError', err)
-        console.log(state.responseError)
+        throw err
       }
     },
     async createBook({ commit, state }, payload) {
@@ -125,6 +125,7 @@ const store = new Vuex.Store({
         console.log(err)
         commit('setFormLoading', false)
         commit('setResponseError', err)
+        throw err
       }
     },
     async deleteBook({ commit }, id) {
@@ -140,6 +141,7 @@ const store = new Vuex.Store({
         console.log(err)
         commit('setDeleteLoadingId', null)
         commit('setResponseError', err)
+        throw err
       }
     },
     async getBook({ commit }, id) {
@@ -169,6 +171,7 @@ const store = new Vuex.Store({
           console.log(err)
           commit('setFormLoading', false)
           commit('setResponseError', err)
+          throw err
         }
       },
   },
