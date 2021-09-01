@@ -26,16 +26,15 @@ export default {
     formLoading: (state) => state.formLoading,
   }),
   methods: {
+    ...mapActions(['getBooks']),
     handleOk(bvModalEvt) {
-
       bvModalEvt.preventDefault()
-
       this.$refs.bookFormChild.handleSubmit()
     },
-    onSuccess(){
-        this.$store.dispatch('getBooks')
-        this.show = false
-    }
+    onSuccess() {
+      this.getBooks()
+      this.show = false
+    },
   },
 }
 </script>

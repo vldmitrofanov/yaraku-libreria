@@ -5,7 +5,9 @@ import store from './store/index'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import router from './router/index'
 import VueRouter from 'vue-router'
+import Vuelidate from 'vuelidate'
 
+Vue.use(Vuelidate)
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 Vue.use(VueRouter)

@@ -15,10 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(['prefix' => 'book'], function () {
-    Route::get('{id}',[\App\Http\Controllers\Api\BookController::class, 'read']);
-    Route::post('/',[\App\Http\Controllers\Api\BookController::class, 'create']);
-    Route::put('{id}',[\App\Http\Controllers\Api\BookController::class, 'update']);
-    Route::delete('{id}',[\App\Http\Controllers\Api\BookController::class, 'delete']);
+    Route::get('{id}',[\App\Http\Controllers\Api\BooksController::class, 'read']);
+    Route::post('/',[\App\Http\Controllers\Api\BooksController::class, 'create']);
+    Route::put('{id}',[\App\Http\Controllers\Api\BooksController::class, 'update']);
+    Route::delete('{id}',[\App\Http\Controllers\Api\BooksController::class, 'delete']);
 });
 
 Route::get('/books',[\App\Http\Controllers\Api\BooksController::class, 'list']);
