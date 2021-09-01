@@ -22,3 +22,4 @@ Route::group(['prefix' => 'book'], function () {
 });
 
 Route::get('/books',[\App\Http\Controllers\Api\BooksController::class, 'list']);
+Route::get('/books/export',[\App\Http\Controllers\Api\BooksController::class, 'export']);

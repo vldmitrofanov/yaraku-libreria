@@ -28,6 +28,8 @@ Vue.component('book-create', require('./components/books/create.vue').default)
 
 Vue.component('book-form', require('./components/books/form.vue').default)
 
+Vue.component('books-export', require('./components/books/export.vue').default)
+
 const app = new Vue({
   el: '#app',
   store,

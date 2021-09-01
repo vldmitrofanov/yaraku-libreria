@@ -39,7 +39,7 @@
         </b-col>
         <b-col sm="9">
           <b-form-input
-            :state="$v.myBook.title.$error ? false : null"
+            :state="$v.myBook.author.$error ? false : null"
             id="authorInput"
             v-model.trim="$v.myBook.author.$model"
             placeholder="Book author"

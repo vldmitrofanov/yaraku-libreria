@@ -19,7 +19,6 @@ class BookResource extends JsonResource
             'title' => $this->title,
             'author' => $this->author,
             'description' => $this->description,
-            'created' => \Carbon\Carbon::parse($this->created_at)->format('M d, Y')
         ];
     }
 }

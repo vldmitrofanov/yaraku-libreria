@@ -11,7 +11,6 @@ const store = new Vuex.Store({
     loading: false,
     formLoading: false,
     deleteLoadingId: null,
-    error: null,
     responseError: null,
     orderBy: 'desc',
     sortBy: 'id',
@@ -33,9 +32,6 @@ const store = new Vuex.Store({
     },
     setDeleteLoadingId(state, deleteLoadingId) {
       state.deleteLoadingId = deleteLoadingId
-    },
-    setError(state, error) {
-      state.error = error
     },
     setSearch(state, search) {
       state.search = search
@@ -62,9 +58,6 @@ const store = new Vuex.Store({
               } else {
                 state.responseError = 'Unknown error'
               }
-              break
-            case 401:
-              state.responseError = 'Error: unauthorised'
               break
             case 422:
               state.responseError = data.message
@@ -161,6 +154,7 @@ const store = new Vuex.Store({
         console.log(err)
         commit('setLoading', false)
         commit('setResponseError', err)
+        throw err
       }
     },
     async updateBook({ commit, state }, payload) {

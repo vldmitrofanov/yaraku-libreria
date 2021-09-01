@@ -9,6 +9,9 @@
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
+        <b-navbar-nav>
+          <b-nav-item><books-export></books-export></b-nav-item>
+        </b-navbar-nav>
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
           <b-nav-form>
@@ -25,6 +28,7 @@
         </b-navbar-nav>
       </b-collapse>
     </div>
+    
   </b-navbar>
 </template>
 <script>

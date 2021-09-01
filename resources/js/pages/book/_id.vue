@@ -11,7 +11,7 @@
       <b-row>
         <b-col>
           <div class="float-right mb-3">
-            <b-button variant="outline-secondary mr-2" @click="cancel">
+            <b-button variant="outline-secondary mr-1" @click="cancel">
               Cancel
             </b-button>
             <b-button variant="outline-primary" @click="handleOk">
@@ -37,6 +37,10 @@ export default {
   }),
   mounted() {
     const id = parseInt(this.$route.params.id)
+    if(isNaN(id)){
+        this.$router.push({ name: 'e404' })
+        return
+    }
     // check if we have local data
     if (this.books && this.books.length > 0) {
       this.books.forEach((v) => {
@@ -48,6 +52,8 @@ export default {
       this.getBook(id).then((v) => {
         console.log(v)
         this.book = Object.assign(v, {})
+      }).catch(e=>{
+          this.$router.push({ name: 'e404' })
       })
     }
   },
